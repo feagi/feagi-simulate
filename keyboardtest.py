@@ -1,4 +1,9 @@
 #! /usr/bin/env python
+
+#modified the code, Keyboard_teleop.py, to adapt the exercise and test the goal.
+# The original code of this modified code is at https://github.com/WPI-Humanoid-Robotics-Lab/drcsim/blob/master/drcsim_gazebo/scripts/keyboard_teleop.py
+#To modify this code is to learn how to use the code and understand how to reacts to arrow keys only. 
+
 import roslib; roslib.load_manifest('drcsim_gazebo')
 
 from atlas_msgs.msg import WalkDemoAction, \
@@ -21,7 +26,7 @@ import select
 import sys
 import termios
 import tty
-import curses #added this line
+import curses #added this line to understand the arrow keys
 import os #added this line for getch
 
 
@@ -34,12 +39,12 @@ class _Getch:
                 ch = sys.stdin.read(3)
             finally:
                 termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-            return ch
+            return ch #This is to read the arrow keys
 
 
 class AtlasTeleop(object):
 
-    # Keyboard teleop bindings
+    # Keyboard teleop bindings		      #This is the map of actions
     dynamic_dir = {'u': {"forward":1, "lateral":0, "turn": 1}, \
                   'i': {"forward":1, "lateral":0, "turn": 0}, \
                   'o': {"forward":1, "lateral":0, "turn":-1}, \
@@ -50,15 +55,6 @@ class AtlasTeleop(object):
                   ',': {"forward":-1, "lateral":0, "turn": 0}, \
                   '.': {"forward":0, "lateral":0, "turn":-0.5}}
 
-#    static_dir = {'U': {"forward":1, "lateral":0, "turn": 1}, \
- #                 'I': {"forward":1, "lateral":0, "turn": 0}, \
-  #                'O': {"forward":1, "lateral":0, "turn":-1}, \
-   #               'J': {"forward":0, "lateral":1, "turn": 0}, \
-    #              'K': {"forward":-1, "lateral":0, "turn": 0}, \
-     #             'L': {"forward":0, "lateral":-1, "turn": 0}, \
-      #            'M': {"forward":0, "lateral":0, "turn": 0.5}, \
-       #           '<': {"forward":-0.5, "lateral":0, "turn": 0}, \
-        #          '>': {"forward":0, "lateral":0, "turn":-0.5}}
 
     # BDI Controller bindings
     params = {"Forward Stride Length":{ "value":0.15, "min":0, "max":1, \
@@ -76,7 +72,7 @@ class AtlasTeleop(object):
               "In Place Turn Size":{"value":math.pi / 16, "min":0, \
                                     "max":math.pi / 2, "type":"float"},
               "Turn Radius":{"value":2, "min":0.01, "max":100, "type":"float"},
-              "Swing Height":{"value":0.1, "min":0, "max":1, "type":"float"}}
+              "Swing Height":{"value":0.1, "min":0, "max":1, "type":"float"}}   #this is like the speed of movement. 
 
     def init(self):
         self.static_step_count = 0
@@ -119,19 +115,14 @@ class AtlasTeleop(object):
 
     def print_usage(self):
         msg = """
-        Keyboard Teleop for AtlasSimInterface 1.1.0
-        Copyright (C) 2013 Open Source Robotics Foundation
-        Released under the Apache 2 License
+        Keyboardtest.py (Modified) for AtlasSimInterface 1.1.0
         --------------------------------------------------
         Dynamic linear movement:
 
-                arrow up
+                       arrow up
            arrow left-         -arrow right
-                arow down
+                       arow down
 
-        Dynamic turn movements:
-        u/o Turn left/right around a point
-        m/. Turn left/right in place
 
 
         """
@@ -145,7 +136,7 @@ class AtlasTeleop(object):
         rospy.sleep(2.0)
         self.mode.publish("nominal")
         rospy.sleep(0.3)
-        self.control_mode.publish("Stand")
+        self.control_mode.publish("Stand") #This will display output on gazebo terminal.
 
     # Builds a trajectory of step commands.
     # Param forward: 1 forward, -1 backward or 0 if no forward component
@@ -454,9 +445,6 @@ class AtlasTeleop(object):
         if self.dynamic_dir.has_key(ch):
             dir = self.dynamic_dir[ch]
             self.dynamic_twist(dir["forward"], dir["lateral"], dir["turn"])
-       # elif self.static_dir.has_key(ch):
-        #    dir = self.static_dir[ch]
-         #   self.static_twist(dir["forward"], dir["lateral"], dir["turn"])  #will delete this block if the code worked
         elif ch == 'e' or ch == 'E':
             self.edit_params()
         elif ch == 'r' or ch == 'R':
@@ -490,14 +478,12 @@ class AtlasTeleop(object):
         #tty.setraw(sys.stdin.fileno())
         #select.select([sys.stdin], [], [], 0)
 	print ("Press R to reset the body. Please press any arrow to move the robot")
-        #key = sys.stdin.read(1) #comment this out to let other code block runs
-	#print key
-	key = 'zzz'
-	#print key
-	inkey = _Getch()
+	key = 'zzz' #just to initalize the variable.
+	#print key #This is for debug use. You may delete this line. 
+	inkey = _Getch() #to read the arrow keys
 	k=inkey()
-	if k=='\x1b[A': #step forward
-		key = 'i'
+	if k=='\x1b[A': #step forward using Getch() and Curse
+		key = 'i' #This will go back to 48 lines in this code
 	elif k=='\x1b[B': #step backward
 		key = 'l'
 	elif k =='\x1b[C':
@@ -506,17 +492,8 @@ class AtlasTeleop(object):
 		key = 'a' #turn right
 	elif k=='r':
 		self.reset_to_standing()
-	#print ("value is: ", key)
-	#if key == curses.KEY_DOWN:
-	#	key='i'
-	#elif key == curses.KEY_UP:
-	#	key=','
-	#char = key
-	#print key
-#	if char == curses.KEY_UP: 
-#		key = 'w'
-	#print key
-        return key
+
+        return key #It sends the key to 107 lines
 
 if __name__ == '__main__':
     rospy.init_node('walking_client')
