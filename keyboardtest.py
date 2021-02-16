@@ -99,6 +99,8 @@ class AtlasTeleop(object):
         # Restore terminal settings
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.settings)
 
+#This function is to "print" the action by moving until the process complete
+#then it will pause and go back to idle.
     def run(self):
         try:
             self.init()
@@ -108,11 +110,11 @@ class AtlasTeleop(object):
                 self.process_key(ch)
         finally:
             self.fini()
-
+#This function doesn't do anything
     def beep(self):
         curses.flash()
 
-
+#This is for output in terminal when you run this code
     def print_usage(self):
         msg = """
         Keyboardtest.py (Modified) for AtlasSimInterface 1.1.0
@@ -212,7 +214,7 @@ class AtlasTeleop(object):
         #     #if self.client.get_result() != SUCCEEDED:
         #     #    self.loginfo("Static walk trajectory timed out, cancelling")
         #     #    break
-
+	#This is for robot to walking properly
     def build_steps(self, forward, lateral, turn):
         L = self.params["Forward Stride Length"]["value"]
         L_lat = self.params["Lateral Stride Length"]["value"]
@@ -492,8 +494,10 @@ class AtlasTeleop(object):
 		key = 'a' #turn right
 	elif k=='r':
 		self.reset_to_standing()
-
-        return key #It sends the key to 107 lines
+	elif k=='q':
+            self.loginfo("Quitting")
+            rospy.signal_shutdown("Shutdown")
+        return key #It sends the value to 107 lines
 
 if __name__ == '__main__':
     rospy.init_node('walking_client')
