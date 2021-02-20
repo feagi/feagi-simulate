@@ -14,10 +14,11 @@ from atlas_msgs.msg import WalkDemoAction, \
                            AtlasBehaviorStandParams, \
                            AtlasBehaviorManipulateParams
 from std_msgs.msg import Header
-
+from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Pose
 from std_msgs.msg import String
 from tf.transformations import quaternion_from_euler
+from sensor_msgs.msg import Range #for proximity ranger
 import actionlib
 import math
 import screen #added this line
@@ -74,8 +75,14 @@ class AtlasTeleop(object):
               "Turn Radius":{"value":2, "min":0.01, "max":100, "type":"float"},
               "Swing Height":{"value":0.1, "min":0, "max":1, "type":"float"}}   #this is like the speed of movement. 
 
+
     def init(self):
         self.static_step_count = 0
+        #scan_sub = rospy.Subscriber('scan', LaserScan, self.scan_callback)
+
+#    def scan_callback(self, msg):
+#	range_ahead = msg.ranges[len(msg.ranges)/2]
+#	print "range ahead: %0.1f" % range_ahead
 
 
         # Saves terminal settings
@@ -110,6 +117,7 @@ class AtlasTeleop(object):
                 self.process_key(ch)
         finally:
             self.fini()
+
 #This function doesn't do anything
     def beep(self):
         curses.flash()
@@ -480,14 +488,14 @@ class AtlasTeleop(object):
         #tty.setraw(sys.stdin.fileno())
         #select.select([sys.stdin], [], [], 0)
 	print ("Press R to reset the body. Please press any arrow to move the robot")
-	key = 'zzz' #just to initalize the variable.
+	key = 'z' #just to initalize the variable.
 	#print key #This is for debug use. You may delete this line. 
 	inkey = _Getch() #to read the arrow keys
 	k=inkey()
 	if k=='\x1b[A': #step forward using Getch() and Curse
 		key = 'i' #This will go back to 48 lines in this code
 	elif k=='\x1b[B': #step backward
-		key = 'l'
+		key = ','
 	elif k =='\x1b[C':
 		key = 'm' #turn left
 	elif k=='\x1b[D':
@@ -499,7 +507,68 @@ class AtlasTeleop(object):
             rospy.signal_shutdown("Shutdown")
         return key #It sends the value to 107 lines
 
-if __name__ == '__main__':
+#class lazer:
+
+#	def __init__(selff):
+#		selff.scan_sub = rospy.Subscriber('scan', LaserScan, selff.callback)
+#		
+
+#	def callback(selff,msg):
+		#laser_data
+#		msg = selff.LaserScan()
+#		print msg
+#Comment this out to not use laserscan
+
+
+def callback(data):
+    rospy.loginfo(rospy.get_name() + ": I heard %s" % data.data)
+
+#def listener():
+    #rospy.init_node('listener', anonymous=True)
+    #rospy.init_node('walking_client') #Adding this to see if it works
+    #rospy.Subscriber("ultrasound", Range, callback)
+    #rospy.spin()
+
+
+def walking_client():
+    pub = rospy.Publisher('range', Range,queue_size=10)
     rospy.init_node('walking_client')
+    ranges = [float('NaN'), 1.0, -float('Inf'), 3.0, float('Inf')]
+    min_range = 2.0
+    max_range = 2.0
+    while not rospy.is_shutdown():
+        for rg in ranges:
+            r = Range()
+            r.header.stamp = rospy.Time.now()
+            r.header.frame_id = "/head"
+            r.radiation_type = 0
+            r.field_of_view = 0.1
+            r.min_range = min_range
+            r.max_range = max_range
+            r.range = rg
+            pub.publish(r)
+            rospy.sleep(1.0)
+#if __name__ == '__main__':
+#    try:
+#        walking_client()
+ #   except rospy.ROSInterruptException: pass
+
+if __name__ == '__main__':
+    #rospy.init_node('walking_client')
+    #rospy.Subscriber("ultrasound", Range, callback)
+    #rosp	y.init_node('range_ahead') #comment this out to keep init_node one
+    #scan_sub = rospy.Subscriber('scan', LaserScan, self.scan_callback)
+    #test = lazer()
+    #test.callback(,msg)
     teleop = AtlasTeleop()
+    try:
+        walking_client()
+    except rospy.ROSInterruptException: pass
+    #test.callback(eas)
+   # print "egg"
+    #listener() #adding this to display the number
     teleop.run()
+   # test = lazer()
+#    print "apple"
+ #   print test.callback(teleop,msg)
+
