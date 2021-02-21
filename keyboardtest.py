@@ -561,8 +561,8 @@ if __name__ == '__main__':
     #test = lazer()
     #test.callback(,msg)
     teleop = AtlasTeleop()
-    try:
-        walking_client()
+    #try:
+    #    walking_client()
     #except rospy.ROSInterruptException: pass
     #test.callback(eas)
    # print "egg"
