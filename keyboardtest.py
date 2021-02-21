@@ -532,7 +532,7 @@ def callback(data):
 
 def walking_client():
     pub = rospy.Publisher('range', Range,queue_size=10)
-    rospy.init_node('walking_client')
+    #rospy.init_node('walking_client')
     ranges = [float('NaN'), 1.0, -float('Inf'), 3.0, float('Inf')]
     min_range = 2.0
     max_range = 2.0
@@ -554,7 +554,7 @@ def walking_client():
  #   except rospy.ROSInterruptException: pass
 
 if __name__ == '__main__':
-    #rospy.init_node('walking_client')
+    rospy.init_node('walking_client')
     #rospy.Subscriber("ultrasound", Range, callback)
     #rosp	y.init_node('range_ahead') #comment this out to keep init_node one
     #scan_sub = rospy.Subscriber('scan', LaserScan, self.scan_callback)
