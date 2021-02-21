@@ -563,7 +563,7 @@ if __name__ == '__main__':
     teleop = AtlasTeleop()
     try:
         walking_client()
-    except rospy.ROSInterruptException: pass
+    #except rospy.ROSInterruptException: pass
     #test.callback(eas)
    # print "egg"
     #listener() #adding this to display the number
