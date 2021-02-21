@@ -382,7 +382,27 @@ class AtlasTeleop(object):
 
         return steps
 
-    # Puts teleop into edit param mode
+def walking_client():
+    pub = rospy.Publisher('range', Range,queue_size=10)
+    #rospy.init_node('walking_client')
+    ranges = [float('NaN'), 1.0, -float('Inf'), 3.0, float('Inf')]
+    min_range = 2.0
+    max_range = 2.0
+    while not rospy.is_shutdown():
+        for rg in ranges:
+            r = Range()
+            r.header.stamp = rospy.Time.now()
+            r.header.frame_id = "/head"
+            r.radiation_type = 0
+            r.field_of_view = 0.1
+            r.min_range = min_range
+            r.max_range = max_range
+            r.range = rg
+            pub.publish(r)
+            rospy.sleep(1.0) ##to see if it being inside the astlas class works
+
+
+   # Puts teleop into edit param mode
     def edit_params(self):
         # Reset terminal to normal settings so you can see input
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.settings)
@@ -530,24 +550,24 @@ def callback(data):
     #rospy.spin()
 
 
-def walking_client():
-    pub = rospy.Publisher('range', Range,queue_size=10)
-    #rospy.init_node('walking_client')
-    ranges = [float('NaN'), 1.0, -float('Inf'), 3.0, float('Inf')]
-    min_range = 2.0
-    max_range = 2.0
-    while not rospy.is_shutdown():
-        for rg in ranges:
-            r = Range()
-            r.header.stamp = rospy.Time.now()
-            r.header.frame_id = "/head"
-            r.radiation_type = 0
-            r.field_of_view = 0.1
-            r.min_range = min_range
-            r.max_range = max_range
-            r.range = rg
-            pub.publish(r)
-            rospy.sleep(1.0)
+#def walking_client():
+#    pub = rospy.Publisher('range', Range,queue_size=10)
+#    #rospy.init_node('walking_client')
+#    ranges = [float('NaN'), 1.0, -float('Inf'), 3.0, float('Inf')]
+#    min_range = 2.0
+#    max_range = 2.0
+#    while not rospy.is_shutdown():
+#        for rg in ranges:
+#            r = Range()
+#            r.header.stamp = rospy.Time.now()
+#            r.header.frame_id = "/head"
+#            r.radiation_type = 0
+#            r.field_of_view = 0.1
+#            r.min_range = min_range
+#            r.max_range = max_range
+#            r.range = rg
+#            pub.publish(r)
+#            rospy.sleep(1.0)
 #if __name__ == '__main__':
 #    try:
 #        walking_client()
