@@ -382,7 +382,7 @@ class AtlasTeleop(object):
 
         return steps
 
-    def walking_client():
+    def datasensor():
         pub = rospy.Publisher('range', Range,queue_size=10)
         #rospy.init_node('walking_client')
         ranges = [float('NaN'), 1.0, -float('Inf'), 3.0, float('Inf')]
