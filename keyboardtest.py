@@ -380,7 +380,8 @@ class AtlasTeleop(object):
 
         steps.append(step)
 
-        return steps
+        return steps 
+
 
     def datasensor():
         pub = rospy.Publisher('range', Range,queue_size=10)
