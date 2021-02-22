@@ -506,7 +506,7 @@ class AtlasTeleop(object):
 
     # Get input from the terminal
     def get_key(self):
-        #tty.setraw(sys.stdin.fileno())
+        tty.setraw(sys.stdin.fileno())
         #select.select([sys.stdin], [], [], 0)
 	print ("Press R to reset the body. Please press any arrow to move the robot")
 	key = 'z' #just to initalize the variable.
