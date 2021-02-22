@@ -30,6 +30,7 @@ import tty
 import curses #added this line to understand the arrow keys
 import os #added this line for getch
 
+key = 'z'
 
 class _Getch:
     def __call__(self):
@@ -511,7 +512,7 @@ class AtlasTeleop(object):
         tty.setraw(sys.stdin.fileno())
         #select.select([sys.stdin], [], [], 0)
 	print ("Press R to reset the body. Please press any arrow to move the robot")
-	key = 'z' #just to initalize the variable.
+	#key = 'z' #just to initalize the variable. #this is the root of infinite loop
 	#print key #This is for debug use. You may delete this line. 
 	inkey = _Getch() #to read the arrow keys
 	k=inkey()
