@@ -112,7 +112,7 @@ class AtlasTeleop(object):
         try:
             self.init()
             self.print_usage()
-            while not rospy.is_shutdown(): #this is the infinite loop 
+            while not (self.get_key()) == 'q' #this is the infinite loop 
                 ch = self.get_key()
                 self.process_key(ch)
         finally:
