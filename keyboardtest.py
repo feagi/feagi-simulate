@@ -112,6 +112,7 @@ class AtlasTeleop(object):
         try:
             self.init()
             self.print_usage()
+	    print "get key = " + (self.get_key())
             while not (self.get_key()) == 'q': #this is the infinite loop 
                 ch = self.get_key()
                 self.process_key(ch)
