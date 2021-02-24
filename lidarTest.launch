@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="drcsim_gazebo" type="lidarTest.py" name="scan_values" output="screen">
+        
+    </node>
+</launch>
