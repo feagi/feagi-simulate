@@ -46,9 +46,9 @@ space key, s : force stop
 CTRL-C to quit
 """
 
-#e = """
-#Communications Failed
-#"""
+e = """
+Communications Failed
+"""
 
 def getKey():
     if os.name == 'nt':
@@ -185,8 +185,8 @@ if __name__=="__main__":
             pub.publish(twist)
 
 
-#    except:
-#        print(e)
+    except:
+        print(e)
 
     finally:
         twist = Twist()
