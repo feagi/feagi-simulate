@@ -139,6 +139,7 @@ if __name__=="__main__":
     try:
 
         while(1):
+            data = 0.0
             updated = callback(data)
             key = getKey()
             if key == 'w' :
