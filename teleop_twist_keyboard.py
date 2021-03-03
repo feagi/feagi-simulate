@@ -164,7 +164,7 @@ if __name__=="__main__":
                 control_angular_vel = 0.0
                 print(vels(target_linear_vel, target_angular_vel))
             elif updated < 0.8 :
-		        print ("Obstacle detected")
+                print ("Obstacle detected")
                 target_linear_vel = 0.0
                 control_linear_vel = 0.0
                 target_angular_vel = 0.0
