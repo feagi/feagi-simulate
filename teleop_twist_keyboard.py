@@ -135,7 +135,7 @@ if __name__=="__main__":
     try:
 
         while(1):
-            callback(dt)
+            callback()
             key = getKey()
             if key == 'w' :
                 target_linear_vel = target_linear_vel + 2
