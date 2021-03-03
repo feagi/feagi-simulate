@@ -104,6 +104,7 @@ def callback(dt):
     Range1 = (format(dt.ranges[0]))
     Range2 = (format(dt.ranges[15]))
     Range3 = (format(dt.ranges[345]))
+    print(Range1)
 
 def checkAngularLimitVelocity(vel):
     if turtlebot3_model == "burger":
@@ -132,9 +133,9 @@ if __name__=="__main__":
     control_angular_vel = 0.0
 
     try:
-        print(msg)
+
         while(1):
-            print(dt.callback)
+            callback(dt)
             key = getKey()
             if key == 'w' :
                 target_linear_vel = target_linear_vel + 2
