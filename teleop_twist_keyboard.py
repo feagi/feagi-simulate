@@ -108,12 +108,7 @@ def callback(dt):
     print '-------------------------------------------'
     thr1 = 0.8 # Laser scan range threshold
     thr2 = 0.8
-    if dt.ranges[0]>thr1 and dt.ranges[15]>thr2 and dt.ranges[345]>thr2:
-        print("Obstacle detected")
-        target_linear_vel = 0.0
-        control_linear_vel = 0.0
-        target_angular_vel = 0.0
-        control_angular_vel = 0.0
+    return dt.ranges[0]
 
 def checkAngularLimitVelocity(vel):
     if turtlebot3_model == "burger":
@@ -144,7 +139,7 @@ if __name__=="__main__":
     try:
 
         while(1):
-            callback(dt)
+            updated = callback(data)
             key = getKey()
             if key == 'w' :
                 target_linear_vel = target_linear_vel + 2
@@ -168,8 +163,12 @@ if __name__=="__main__":
                 target_angular_vel  = 0.0
                 control_angular_vel = 0.0
                 print(vels(target_linear_vel, target_angular_vel))
-#            elif Range1 < 0.99 :
-#		        print ("Obstacle detected")
+            elif updated < 0.8 :
+		        print ("Obstacle detected")
+                target_linear_vel = 0.0
+                control_linear_vel = 0.0
+                target_angular_vel = 0.0
+                control_angular_vel = 0.0
             else:
                 if ((key == '\x03')):
                     break
