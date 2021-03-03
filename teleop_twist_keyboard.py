@@ -110,7 +110,10 @@ def callback(dt):
     thr2 = 0.8
     if dt.ranges[0]>thr1 and dt.ranges[15]>thr2 and dt.ranges[345]>thr2:
         print("Obstacle detected")
-        break
+        target_linear_vel = 0.0
+        control_linear_vel = 0.0
+        target_angular_vel = 0.0
+        control_angular_vel = 0.0
 
 def checkAngularLimitVelocity(vel):
     if turtlebot3_model == "burger":
