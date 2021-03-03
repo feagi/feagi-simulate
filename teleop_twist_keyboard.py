@@ -134,7 +134,7 @@ if __name__=="__main__":
     try:
         print(msg)
         while(1):
-            print(sub)
+            print(Range1)
             key = getKey()
             if key == 'w' :
                 target_linear_vel = target_linear_vel + 2
