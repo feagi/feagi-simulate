@@ -134,6 +134,7 @@ if __name__=="__main__":
     try:
         print(msg)
         while(1):
+            print(sub)
             key = getKey()
             if key == 'w' :
                 target_linear_vel = target_linear_vel + 2
@@ -157,8 +158,8 @@ if __name__=="__main__":
                 target_angular_vel  = 0.0
                 control_angular_vel = 0.0
                 print(vels(target_linear_vel, target_angular_vel))
-            elif Range1 < 0.99 :
-		print ("Obstacle detected")
+#            elif Range1 < 0.99 :
+#		print ("Obstacle detected")
             else:
                 if ((key == '\x03')):
                     break
