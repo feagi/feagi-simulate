@@ -17,15 +17,6 @@ if os.name == 'nt':
 else:
   import tty, termios
 
-BURGER_MAX_LIN_VEL = 0.22
-BURGER_MAX_ANG_VEL = 2.84
-
-WAFFLE_MAX_LIN_VEL = 0.26
-WAFFLE_MAX_ANG_VEL = 1.82
-
-LIN_VEL_STEP_SIZE = 0.01
-ANG_VEL_STEP_SIZE = 0.1
-
 Range1 = 0
 Range2 = 0
 Range3 = 0
@@ -106,8 +97,7 @@ def callback(dt):
     print('Range data at 15 deg:  {}'.format(dt.ranges[15]))
     print('Range data at 345 deg: {}'.format(dt.ranges[345]))
     print('-------------------------------------------')
-    thr1 = 0.8 # Laser scan range threshold
-    thr2 = 0.8
+
     return dt.ranges[0]
 
 def checkAngularLimitVelocity(vel):
@@ -135,13 +125,14 @@ if __name__=="__main__":
     target_angular_vel  = 0.0
     control_linear_vel  = 0.0
     control_angular_vel = 0.0
+    data = 0.0
 
     try:
 
         while(1):
-            data = 0.0
             updated = callback(data)
             key = getKey()
+            print(key)
             if key == 'w' :
                 target_linear_vel = target_linear_vel + 2
                 status = status + 1
