@@ -5,11 +5,13 @@
 #https://github.com/ros-teleop/teleop_twist_keyboard/blob/master/teleop_twist_keyboard.py
 
 
-
+import numpy as np
+import pandas as pd
 import rospy
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan # LaserScan type message is defined in sensor_msgs
 import sys, select, os
+
 
 
 if os.name == 'nt':
