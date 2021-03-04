@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Code mixed with 
+# Code mixed with
 #https://github.com/enansakib/obstacle-avoidance-turtlebot/blob/master/src/naive_obs_avoid_tb3.py
 #https://github.com/ros-teleop/teleop_twist_keyboard/blob/master/teleop_twist_keyboard.py
 
@@ -109,6 +109,8 @@ def checkAngularLimitVelocity(vel):
       vel = constrain(vel, -BURGER_MAX_ANG_VEL, BURGER_MAX_ANG_VEL)
 
     return vel
+def ctrlc():
+    print("Ctrl + C detected, shutting the code down")
 
 if __name__=="__main__":
     if os.name != 'nt':
@@ -127,43 +129,44 @@ if __name__=="__main__":
     control_angular_vel = 0.0
     data = 0.0
 
-    try:
+    #try:
 
-        while(1):
-            updated = callback(data)
-            key = getKey()
-            print(key)
-            if key == 'w' :
-                target_linear_vel = target_linear_vel + 2
-                status = status + 1
-                print(vels(target_linear_vel,target_angular_vel))
-            elif key == 'x' :
-                target_linear_vel = target_linear_vel -2
-                status = status + 1
-                print(vels(target_linear_vel,target_angular_vel))
-            elif key == 'a' :
-                target_angular_vel = target_linear_vel + 1
-                status = status + 1
-                print(vels(target_linear_vel,target_angular_vel))
-            elif key == 'd' :
-                target_angular_vel = target_linear_vel - 1
-                status = status + 1
-                print(vels(target_linear_vel,target_angular_vel))
-            elif key == ' ' or key == 's' :
-                target_linear_vel   = 0.0
-                control_linear_vel  = 0.0
-                target_angular_vel  = 0.0
-                control_angular_vel = 0.0
-                print(vels(target_linear_vel, target_angular_vel))
-            elif updated < 0.8 :
-                print ("Obstacle detected")
-                target_linear_vel = 0.0
-                control_linear_vel = 0.0
-                target_angular_vel = 0.0
-                control_angular_vel = 0.0
-            else:
-                if ((key == '\x03')):
-                    break
+        #while(1):
+    updated = callback(data)
+    key = getKey()
+    print(key)
+    if key == 'w' :
+        target_linear_vel = target_linear_vel + 2
+        status = status + 1
+        print(vels(target_linear_vel,target_angular_vel))
+    elif key == 'x' :
+        target_linear_vel = target_linear_vel -2
+        status = status + 1
+        print(vels(target_linear_vel,target_angular_vel))
+    elif key == 'a' :
+        target_angular_vel = target_linear_vel + 1
+        status = status + 1
+        print(vels(target_linear_vel,target_angular_vel))
+    elif key == 'd' :
+        target_angular_vel = target_linear_vel - 1
+        status = status + 1
+        print(vels(target_linear_vel,target_angular_vel))
+    elif key == ' ' or key == 's' :
+        target_linear_vel   = 0.0
+        control_linear_vel  = 0.0
+        target_angular_vel  = 0.0
+        control_angular_vel = 0.0
+        print(vels(target_linear_vel, target_angular_vel))
+    elif updated < 0.8 :
+        print ("Obstacle detected")
+        target_linear_vel = 0.0
+        control_linear_vel = 0.0
+        target_angular_vel = 0.0
+        control_angular_vel = 0.0
+    else:
+        if ((key == '\x03')):
+            rospy.on_shutdown(ctrlc)
+            #break
 
 
             twist = Twist()
@@ -179,11 +182,14 @@ if __name__=="__main__":
 #    except:
 #        print(e)
 
-    finally:
-        twist = Twist()
-        twist.linear.x = 0.0; twist.linear.y = 0.0; twist.linear.z = 0.0
-        twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = 0.0
-        pub.publish(twist)
+#    finally:
+#        twist = Twist()
+#        twist.linear.x = 0.0; twist.linear.y = 0.0; twist.linear.z = 0.0
+#        twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = 0.0
+#        pub.publish(twist)
 
     if os.name != 'nt':
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+
+
+rospy.spin()
