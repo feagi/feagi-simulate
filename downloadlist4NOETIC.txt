@@ -1,2 +1,0 @@
-1) git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
-2) https://emanual.robotis.com/docs/en/platform/turtlebot3/slam_simulation/
