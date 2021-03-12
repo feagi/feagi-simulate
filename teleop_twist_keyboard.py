@@ -297,13 +297,14 @@ class Turtlebot3ObstacleDetection(Node):
         twist = Twist()
         obstacle_distance = min(self.scan_ranges)
         safety_distance = 0.3  # unit: m
-
-        if obstacle_distance > safety_distance:
-            main()
-        else:
-            twist.linear.x = 0.0
-            twist.angular.z = 0.0
-            self.get_logger().info("Obstacles are detected nearby. Robot stopped.")
+        while (obstacle_distance > safety_distance)
+            if obstacle_distance > safety_distance:
+                main()
+            else:
+                twist.linear.x = 0.0
+                twist.angular.z = 0.0
+                self.get_logger().info("Obstacles are detected nearby. Robot stopped.")
+                break
 
         self.cmd_vel_pub.publish(twist)
 
