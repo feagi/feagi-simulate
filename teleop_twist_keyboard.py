@@ -297,7 +297,7 @@ class Turtlebot3ObstacleDetection(Node):
         twist = Twist()
         obstacle_distance = min(self.scan_ranges)
         safety_distance = 0.3  # unit: m
-        while (obstacle_distance > safety_distance)
+        while (1):
             if obstacle_distance > safety_distance:
                 main()
             else:
