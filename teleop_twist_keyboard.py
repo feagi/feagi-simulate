@@ -132,37 +132,37 @@ def main():
 
     try:
         print(msg)
-        #while (1):
-        key = get_key(settings)
-        if key == 'w':
-            target_linear_velocity = \
-                check_linear_limit_velocity(target_linear_velocity + LIN_VEL_STEP_SIZE)
-            status = status + 1
-            print_vels(target_linear_velocity, target_angular_velocity)
-        elif key == 'x':
-            target_linear_velocity = \
-                check_linear_limit_velocity(target_linear_velocity - LIN_VEL_STEP_SIZE)
-            status = status + 1
-            print_vels(target_linear_velocity, target_angular_velocity)
-        elif key == 'a':
-            target_angular_velocity = \
-                check_angular_limit_velocity(target_angular_velocity + ANG_VEL_STEP_SIZE)
-            status = status + 1
-            print_vels(target_linear_velocity, target_angular_velocity)
-        elif key == 'd':
-            target_angular_velocity = \
-                check_angular_limit_velocity(target_angular_velocity - ANG_VEL_STEP_SIZE)
-            status = status + 1
-            print_vels(target_linear_velocity, target_angular_velocity)
-        elif key == ' ' or key == 's':
-            target_linear_velocity = 0.0
-            control_linear_velocity = 0.0
-            target_angular_velocity = 0.0
-            control_angular_velocity = 0.0
-            print_vels(target_linear_velocity, target_angular_velocity)
-        #else:
-        #    if (key == '\x03'):
-        #        break
+        while (1):
+            key = get_key(settings)
+            if key == 'w':
+                target_linear_velocity = \
+                    check_linear_limit_velocity(target_linear_velocity + LIN_VEL_STEP_SIZE)
+                status = status + 1
+                print_vels(target_linear_velocity, target_angular_velocity)
+            elif key == 'x':
+                target_linear_velocity = \
+                    check_linear_limit_velocity(target_linear_velocity - LIN_VEL_STEP_SIZE)
+                status = status + 1
+                print_vels(target_linear_velocity, target_angular_velocity)
+            elif key == 'a':
+                target_angular_velocity = \
+                    check_angular_limit_velocity(target_angular_velocity + ANG_VEL_STEP_SIZE)
+                status = status + 1
+                print_vels(target_linear_velocity, target_angular_velocity)
+            elif key == 'd':
+                target_angular_velocity = \
+                    check_angular_limit_velocity(target_angular_velocity - ANG_VEL_STEP_SIZE)
+                status = status + 1
+                print_vels(target_linear_velocity, target_angular_velocity)
+            elif key == ' ' or key == 's':
+                target_linear_velocity = 0.0
+                control_linear_velocity = 0.0
+                target_angular_velocity = 0.0
+                control_angular_velocity = 0.0
+                print_vels(target_linear_velocity, target_angular_velocity)
+            else:
+             if (key == '\x03'):
+                    break
 
             if status == 20:
                 print(msg)
