@@ -282,5 +282,5 @@ class Turtlebot3ObstacleDetection(Node):
 
 
 
-#if __name__ == '__main__':
-#    main()
+if __name__ == '__main__':
+    main()
