@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 #
-#Credit section:
+#Sample from:
 #https://github.com/ROBOTIS-GIT/turtlebot3/blob/foxy-devel/turtlebot3_teleop/turtlebot3_teleop/script/teleop_keyboard.py
-
+#
 
 
 
