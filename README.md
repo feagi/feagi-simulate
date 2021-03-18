@@ -14,3 +14,17 @@ sudo cp -R ~/feagi-simulate/turtblebot3_example_launch /opt/ros/foxy/lib/turtleb
 
 
 
+Once you complete it,
+open a new terminal
+source your ros
+run gazebo
+
+open the second terminal
+source your ros
+run this line;
+ros2 run turtlebot3_teleop teleop_keyboard
+
+The goal is to control the robot and move the robot until it approach to any object, it will halts and print a message, "Obstacles are detected nearby. Robot stopped."
+
+
+
