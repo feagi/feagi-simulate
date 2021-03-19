@@ -26,5 +26,9 @@ ros2 run turtlebot3_teleop teleop_keyboard
 
 The goal is to control the robot and move the robot until it approach to any object, it will halts and print a message, "Obstacles are detected nearby. Robot stopped."
 
+The flowchart of this should display all goal of this sample code.
+
+![image](https://user-images.githubusercontent.com/65916520/111640188-91d49c80-87c1-11eb-8a25-d9cf4381b1c7.png)
 
 
+The lidar reading coming from turtlebot3_obstacle_detection and the keyboard control is from turtlebot3_teleop
