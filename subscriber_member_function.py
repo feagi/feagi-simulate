@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sensor_msgs.msg
+import sensor_msgs.msg #this is needed to read lidar or any related to lidar.
 import rclpy
 
 from rclpy.node import Node
-from sensor_msgs.msg import LaserScan
+from sensor_msgs.msg import LaserScan #to call laserscan so it can convert the data or provide the data
 from rclpy.qos import QoSProfile
-from rclpy.qos import qos_profile_sensor_data
+from rclpy.qos import qos_profile_sensor_data #this is required to have a full data
 
 class MinimalSubscriber(Node):
 
@@ -32,7 +32,7 @@ class MinimalSubscriber(Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        self.get_logger().info("I heard: {}".format(msg))
+        self.get_logger().info("I heard: {}".format(msg)) #put .format(msg) to display the data
 
 def main(args=None):
     rclpy.init(args=args)
