@@ -1,0 +1,25 @@
+[0.372s] Invoking command in '/home/bwuk/turtlebot3_ws/build/turtlebot3_teleop': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop --editable --build-directory /home/bwuk/turtlebot3_ws/build/turtlebot3_teleop/build --no-deps install_data --install-dir /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop
+[0.681s] running develop
+[0.878s] running egg_info
+[0.879s] creating turtlebot3_teleop.egg-info
+[0.879s] writing turtlebot3_teleop.egg-info/PKG-INFO
+[0.879s] writing dependency_links to turtlebot3_teleop.egg-info/dependency_links.txt
+[0.879s] writing entry points to turtlebot3_teleop.egg-info/entry_points.txt
+[0.879s] writing requirements to turtlebot3_teleop.egg-info/requires.txt
+[0.879s] writing top-level names to turtlebot3_teleop.egg-info/top_level.txt
+[0.881s] writing manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.913s] reading manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.914s] writing manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.969s] running build_ext
+[0.972s] Creating /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages/site.py
+[0.975s] Creating /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages/turtlebot3-teleop.egg-link (link to .)
+[0.975s] Installing teleop_keyboard script to /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[0.975s] 
+[0.975s] Installed /home/bwuk/turtlebot3_ws/build/turtlebot3_teleop
+[0.976s] running install_data
+[0.976s] creating /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/share/ament_index
+[0.976s] creating /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/share/ament_index/resource_index
+[0.976s] creating /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[0.976s] copying resource/turtlebot3_teleop -> /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/share/ament_index/resource_index/packages
+[0.976s] copying package.xml -> /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/share/turtlebot3_teleop
+[1.020s] Invoked command in '/home/bwuk/turtlebot3_ws/build/turtlebot3_teleop' returned '0': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop --editable --build-directory /home/bwuk/turtlebot3_ws/build/turtlebot3_teleop/build --no-deps install_data --install-dir /home/bwuk/turtlebot3_ws/install/turtlebot3_teleop

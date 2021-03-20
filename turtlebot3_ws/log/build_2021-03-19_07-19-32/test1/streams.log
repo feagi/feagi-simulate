@@ -1,0 +1,23 @@
+[0.326s] Invoking command in '/home/bwuk/turtlebot3_ws/src/test1': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test1 build --build-base /home/bwuk/turtlebot3_ws/build/test1/build install --prefix /home/bwuk/turtlebot3_ws/install/test1 --record /home/bwuk/turtlebot3_ws/build/test1/install.log --single-version-externally-managed
+[0.601s] running egg_info
+[0.601s] writing ../../build/test1/test1.egg-info/PKG-INFO
+[0.601s] writing dependency_links to ../../build/test1/test1.egg-info/dependency_links.txt
+[0.602s] writing entry points to ../../build/test1/test1.egg-info/entry_points.txt
+[0.602s] writing requirements to ../../build/test1/test1.egg-info/requires.txt
+[0.602s] writing top-level names to ../../build/test1/test1.egg-info/top_level.txt
+[0.635s] reading manifest file '../../build/test1/test1.egg-info/SOURCES.txt'
+[0.636s] writing manifest file '../../build/test1/test1.egg-info/SOURCES.txt'
+[0.636s] running build
+[0.636s] running build_py
+[0.636s] copying test1/test1.py -> /home/bwuk/turtlebot3_ws/build/test1/build/lib/test1
+[0.636s] running install
+[0.637s] running install_lib
+[0.638s] copying /home/bwuk/turtlebot3_ws/build/test1/build/lib/test1/test1.py -> /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1
+[0.639s] byte-compiling /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1/test1.py to test1.cpython-38.pyc
+[0.640s] running install_data
+[0.641s] running install_egg_info
+[0.642s] removing '/home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1-0.0.0-py3.8.egg-info' (and everything under it)
+[0.643s] Copying ../../build/test1/test1.egg-info to /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1-0.0.0-py3.8.egg-info
+[0.644s] running install_scripts
+[0.662s] writing list of installed files to '/home/bwuk/turtlebot3_ws/build/test1/install.log'
+[0.686s] Invoked command in '/home/bwuk/turtlebot3_ws/src/test1' returned '0': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test1 build --build-base /home/bwuk/turtlebot3_ws/build/test1/build install --prefix /home/bwuk/turtlebot3_ws/install/test1 --record /home/bwuk/turtlebot3_ws/build/test1/install.log --single-version-externally-managed

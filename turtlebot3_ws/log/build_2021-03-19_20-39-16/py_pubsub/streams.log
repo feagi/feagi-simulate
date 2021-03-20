@@ -1,0 +1,28 @@
+[0.293s] Invoking command in '/home/bwuk/turtlebot3_ws/src/py_pubsub': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/bwuk/turtlebot3_ws/build/py_pubsub/build install --prefix /home/bwuk/turtlebot3_ws/install/py_pubsub --record /home/bwuk/turtlebot3_ws/build/py_pubsub/install.log --single-version-externally-managed
+[0.540s] running egg_info
+[0.540s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[0.541s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[0.541s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[0.541s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[0.541s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[0.576s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[0.577s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[0.577s] running build
+[0.577s] running build_py
+[0.577s] copying py_pubsub/subscriber_member_function.py -> /home/bwuk/turtlebot3_ws/build/py_pubsub/build/lib/py_pubsub
+[0.577s] copying py_pubsub/publisher_member_function.py -> /home/bwuk/turtlebot3_ws/build/py_pubsub/build/lib/py_pubsub
+[0.577s] running install
+[0.578s] running install_lib
+[0.579s] copying /home/bwuk/turtlebot3_ws/build/py_pubsub/build/lib/py_pubsub/subscriber_member_function.py -> /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub
+[0.579s] copying /home/bwuk/turtlebot3_ws/build/py_pubsub/build/lib/py_pubsub/publisher_member_function.py -> /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub
+[0.580s] byte-compiling /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/subscriber_member_function.py to subscriber_member_function.cpython-38.pyc
+[0.581s] byte-compiling /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/publisher_member_function.py to publisher_member_function.cpython-38.pyc
+[0.582s] running install_data
+[0.582s] running install_egg_info
+[0.584s] removing '/home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info' (and everything under it)
+[0.584s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info
+[0.585s] running install_scripts
+[0.603s] Installing listener script to /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/py_pubsub
+[0.603s] Installing talker script to /home/bwuk/turtlebot3_ws/install/py_pubsub/lib/py_pubsub
+[0.603s] writing list of installed files to '/home/bwuk/turtlebot3_ws/build/py_pubsub/install.log'
+[0.627s] Invoked command in '/home/bwuk/turtlebot3_ws/src/py_pubsub' returned '0': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/py_pubsub/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /home/bwuk/turtlebot3_ws/build/py_pubsub/build install --prefix /home/bwuk/turtlebot3_ws/install/py_pubsub --record /home/bwuk/turtlebot3_ws/build/py_pubsub/install.log --single-version-externally-managed

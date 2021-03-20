@@ -1,0 +1,4 @@
+[01m[K/home/bwuk/turtlebot3_ws/src/utils/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/bwuk/turtlebot3_ws/src/utils/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp:175:38:[m[K [01;35m[Kwarning: [m[Kcatching polymorphic type ‘[01m[Kclass boost::system::system_error[m[K’ by value [[01;35m[K-Wcatch-value=[m[K]
+  175 |   catch (boost::system::system_error [01;35m[Kex[m[K)
+      |                                      [01;35m[K^~[m[K

@@ -1,0 +1,10 @@
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/install/strip.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/install/local.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/edit_cache.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/test.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/turtlebot3_fake_node.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/install.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/list_install_components.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/rebuild_cache.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/turtlebot3_fake_node_uninstall.dir
+/home/bwuk/turtlebot3_ws/build/turtlebot3_fake_node/CMakeFiles/uninstall.dir

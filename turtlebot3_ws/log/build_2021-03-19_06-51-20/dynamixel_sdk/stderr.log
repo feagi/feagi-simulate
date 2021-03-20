@@ -1,0 +1,8 @@
+[01m[K/home/bwuk/turtlebot3_ws/src/utils/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp:[m[K In member function ‘[01m[Kbool dynamixel::GroupBulkRead::getError(uint8_t, uint8_t*)[m[K’:
+[01m[K/home/bwuk/turtlebot3_ws/src/utils/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp:235:19:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+  235 |   return [01;35m[Kerror[0] = error_list_[id][0][m[K;
+      |          [01;35m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bwuk/turtlebot3_ws/src/utils/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp:[m[K In member function ‘[01m[Kbool dynamixel::GroupSyncRead::getError(uint8_t, uint8_t*)[m[K’:
+[01m[K/home/bwuk/turtlebot3_ws/src/utils/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp:204:19:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+  204 |   return [01;35m[Kerror[0] = error_list_[id][0][m[K;
+      |          [01;35m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K

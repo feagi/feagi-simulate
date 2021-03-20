@@ -1,0 +1,78 @@
+[0.023s] Invoking command in '/home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop:/home/bwuk/turtlebot3_ws/install/turtlebot3_example:/opt/ros/foxy /usr/bin/cmake /home/bwuk/turtlebot3_ws/src/utils/hls_lfcd_lds_driver -DCMAKE_INSTALL_PREFIX=/home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver
+[0.271s] -- The C compiler identification is GNU 9.3.0
+[0.411s] -- The CXX compiler identification is GNU 9.3.0
+[0.422s] -- Check for working C compiler: /usr/bin/cc
+[0.511s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.513s] -- Detecting C compiler ABI info
+[0.601s] -- Detecting C compiler ABI info - done
+[0.617s] -- Detecting C compile features
+[0.618s] -- Detecting C compile features - done
+[0.621s] -- Check for working CXX compiler: /usr/bin/c++
+[0.727s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.729s] -- Detecting CXX compiler ABI info
+[0.837s] -- Detecting CXX compiler ABI info - done
+[0.853s] -- Detecting CXX compile features
+[0.854s] -- Detecting CXX compile features - done
+[0.861s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.905s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+[0.905s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.203s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.294s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.309s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.536s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.680s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.919s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.092s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.097s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.099s] -- Looking for pthread.h
+[2.256s] -- Looking for pthread.h - found
+[2.262s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.383s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.383s] -- Looking for pthread_create in pthreads
+[2.467s] -- Looking for pthread_create in pthreads - not found
+[2.467s] -- Looking for pthread_create in pthread
+[2.562s] -- Looking for pthread_create in pthread - found
+[2.562s] -- Found Threads: TRUE  
+[2.822s] -- Found sensor_msgs: 2.0.3 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.997s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system 
+[3.086s] -- Configuring done
+[3.097s] -- Generating done
+[3.098s] -- Build files have been written to: /home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver
+[3.110s] Invoked command in '/home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop:/home/bwuk/turtlebot3_ws/install/turtlebot3_example:/opt/ros/foxy /usr/bin/cmake /home/bwuk/turtlebot3_ws/src/utils/hls_lfcd_lds_driver -DCMAKE_INSTALL_PREFIX=/home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver
+[3.111s] Invoking command in '/home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop:/home/bwuk/turtlebot3_ws/install/turtlebot3_example:/opt/ros/foxy /usr/bin/cmake --build /home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver -- -j8 -l8
+[3.163s] [35m[1mScanning dependencies of target hlds_laser_publisher[0m
+[3.255s] [ 50%] [32mBuilding CXX object CMakeFiles/hlds_laser_publisher.dir/src/hlds_laser_publisher.cpp.o[0m
+[6.095s] [01m[K/home/bwuk/turtlebot3_ws/src/utils/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[6.095s] [01m[K/home/bwuk/turtlebot3_ws/src/utils/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp:175:38:[m[K [01;35m[Kwarning: [m[Kcatching polymorphic type ‘[01m[Kclass boost::system::system_error[m[K’ by value [[01;35m[K-Wcatch-value=[m[K]
+[6.095s]   175 |   catch (boost::system::system_error [01;35m[Kex[m[K)
+[6.095s]       |                                      [01;35m[K^~[m[K
+[8.703s] [100%] [32m[1mLinking CXX executable hlds_laser_publisher[0m
+[8.982s] [100%] Built target hlds_laser_publisher
+[8.995s] Invoked command in '/home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop:/home/bwuk/turtlebot3_ws/install/turtlebot3_example:/opt/ros/foxy /usr/bin/cmake --build /home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver -- -j8 -l8
+[9.025s] Invoking command in '/home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop:/home/bwuk/turtlebot3_ws/install/turtlebot3_example:/opt/ros/foxy /usr/bin/cmake --install /home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver
+[9.036s] -- Install configuration: ""
+[9.036s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/launch
+[9.037s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/launch/view_hlds_laser.launch.py
+[9.037s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/launch/hlds_laser.launch.py
+[9.037s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/rviz
+[9.037s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/rviz/hlds_laser.rviz
+[9.037s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/lib/hls_lfcd_lds_driver/hlds_laser_publisher
+[9.039s] -- Set runtime path of "/home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/lib/hls_lfcd_lds_driver/hlds_laser_publisher" to ""
+[9.039s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/ament_index/resource_index/package_run_dependencies/hls_lfcd_lds_driver
+[9.040s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/ament_index/resource_index/parent_prefix_path/hls_lfcd_lds_driver
+[9.040s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/environment/ament_prefix_path.sh
+[9.040s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/environment/ament_prefix_path.dsv
+[9.040s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/environment/path.sh
+[9.040s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/environment/path.dsv
+[9.041s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/local_setup.bash
+[9.041s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/local_setup.sh
+[9.041s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/local_setup.zsh
+[9.041s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/local_setup.dsv
+[9.041s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/package.dsv
+[9.042s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/ament_index/resource_index/packages/hls_lfcd_lds_driver
+[9.042s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.042s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[9.042s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/cmake/hls_lfcd_lds_driverConfig.cmake
+[9.042s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/cmake/hls_lfcd_lds_driverConfig-version.cmake
+[9.042s] -- Installing: /home/bwuk/turtlebot3_ws/install/hls_lfcd_lds_driver/share/hls_lfcd_lds_driver/package.xml
+[9.046s] Invoked command in '/home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bwuk/turtlebot3_ws/install/turtlebot3_teleop:/home/bwuk/turtlebot3_ws/install/turtlebot3_example:/opt/ros/foxy /usr/bin/cmake --install /home/bwuk/turtlebot3_ws/build/hls_lfcd_lds_driver

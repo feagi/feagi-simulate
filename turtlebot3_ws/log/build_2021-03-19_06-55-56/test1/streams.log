@@ -1,0 +1,33 @@
+[0.366s] Invoking command in '/home/bwuk/turtlebot3_ws/src/test1': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test1 build --build-base /home/bwuk/turtlebot3_ws/build/test1/build install --prefix /home/bwuk/turtlebot3_ws/install/test1 --record /home/bwuk/turtlebot3_ws/build/test1/install.log --single-version-externally-managed
+[0.677s] running egg_info
+[0.678s] creating ../../build/test1/test1.egg-info
+[0.678s] writing ../../build/test1/test1.egg-info/PKG-INFO
+[0.678s] writing dependency_links to ../../build/test1/test1.egg-info/dependency_links.txt
+[0.678s] writing entry points to ../../build/test1/test1.egg-info/entry_points.txt
+[0.679s] writing requirements to ../../build/test1/test1.egg-info/requires.txt
+[0.679s] writing top-level names to ../../build/test1/test1.egg-info/top_level.txt
+[0.681s] writing manifest file '../../build/test1/test1.egg-info/SOURCES.txt'
+[0.726s] reading manifest file '../../build/test1/test1.egg-info/SOURCES.txt'
+[0.726s] writing manifest file '../../build/test1/test1.egg-info/SOURCES.txt'
+[0.727s] running build
+[0.727s] running build_py
+[0.727s] creating /home/bwuk/turtlebot3_ws/build/test1/build
+[0.727s] creating /home/bwuk/turtlebot3_ws/build/test1/build/lib
+[0.728s] creating /home/bwuk/turtlebot3_ws/build/test1/build/lib/test1
+[0.728s] copying test1/__init__.py -> /home/bwuk/turtlebot3_ws/build/test1/build/lib/test1
+[0.728s] running install
+[0.729s] running install_lib
+[0.731s] creating /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1
+[0.732s] copying /home/bwuk/turtlebot3_ws/build/test1/build/lib/test1/__init__.py -> /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1
+[0.732s] byte-compiling /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1/__init__.py to __init__.cpython-38.pyc
+[0.734s] running install_data
+[0.735s] creating /home/bwuk/turtlebot3_ws/install/test1/share/ament_index
+[0.735s] creating /home/bwuk/turtlebot3_ws/install/test1/share/ament_index/resource_index
+[0.735s] creating /home/bwuk/turtlebot3_ws/install/test1/share/ament_index/resource_index/packages
+[0.735s] copying resource/test1 -> /home/bwuk/turtlebot3_ws/install/test1/share/ament_index/resource_index/packages
+[0.735s] copying package.xml -> /home/bwuk/turtlebot3_ws/install/test1/share/test1
+[0.735s] running install_egg_info
+[0.738s] Copying ../../build/test1/test1.egg-info to /home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages/test1-0.0.0-py3.8.egg-info
+[0.738s] running install_scripts
+[0.762s] writing list of installed files to '/home/bwuk/turtlebot3_ws/build/test1/install.log'
+[0.788s] Invoked command in '/home/bwuk/turtlebot3_ws/src/test1' returned '0': PYTHONPATH=/home/bwuk/turtlebot3_ws/install/test1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test1 build --build-base /home/bwuk/turtlebot3_ws/build/test1/build install --prefix /home/bwuk/turtlebot3_ws/install/test1 --record /home/bwuk/turtlebot3_ws/build/test1/install.log --single-version-externally-managed
