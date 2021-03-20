@@ -32,3 +32,18 @@ The flowchart of this should display all goal of this sample code.
 
 
 The lidar reading coming from turtlebot3_obstacle_detection and the keyboard control is from turtlebot3_teleop
+
+
+Update 03/19/2021:
+
+Download the turtlebot3_ws folder.
+cd to turtlebot3_ws then run this line;
+colcon build --packages-select py_pubsub
+
+Once it generated successfully, be sure to source your ros inside the turtlebot3_ws folder;
+. install/setup.bash
+
+then run the code by paste this line;
+ros2 run py_pubsub listener
+
+Be sure to have turtlebot3 model in the gazebo open already. 
