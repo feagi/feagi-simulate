@@ -1,4 +1,4 @@
-kkk# Copyright 2016 Open Source Robotics Foundation, Inc.
+# Copyright 2016 Open Source Robotics Foundation, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,13 @@ kkk# Copyright 2016 Open Source Robotics Foundation, Inc.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sensor_msgs.msg
 import rclpy
+
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
+from rclpy.qos import QoSProfile
+from rclpy.qos import qos_profile_sensor_data
 
 class MinimalSubscriber(Node):
 
@@ -24,7 +28,7 @@ class MinimalSubscriber(Node):
             LaserScan,
             'scan',
             self.listener_callback,
-            10)
+            qos_profile=qos_profile_sensor_data)
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
