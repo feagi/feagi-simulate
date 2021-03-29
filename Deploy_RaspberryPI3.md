@@ -1,4 +1,4 @@
-#To download ROS2 on 20.04 LTS Focal Ubuntu arm64 in the Raspberry pi model b+:
+# To download ROS2 on 20.04 LTS Focal Ubuntu arm64 in the Raspberry pi model b+:
 1. dpkg --print-architecture
 * Verify the match package from the [link](https://github.com/ros2/ros2/releases/tag/release-foxy-20201211)
 2. Select your right package for your computer. It will be in your download folder by default. 
