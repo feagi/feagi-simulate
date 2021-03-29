@@ -10,7 +10,7 @@
 -mkdir -p ~/ros2_foxy
 -cd ~/ros2_foxy
 
-4.Depends on where you put the package. Assume you still have it in Download directory:
+4. Depends on where you put the package. Assume you still have it in Download directory:
 -tar xf ~/Downloads/ros2-foxy-20201211-linux-focal-arm64.tar.bz2 
 >if it's in your ros2_foxy folder, run this:
 	-tar xf ros2-foxy-20201211-linux-focal-arm64.tar.bz2
@@ -33,7 +33,7 @@
 >(in new terminal after you source again)
 
 
-#Download Feagi
+# Download Feagi
 1. git clone git@github.com:feagi/feagi-core.git
 2. cd feagi-core/
 3. pip3 install virtualenv
