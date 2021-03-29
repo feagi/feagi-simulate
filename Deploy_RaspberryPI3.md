@@ -12,15 +12,14 @@
 
 4. Depends on where you put the package. Assume you still have it in Download directory:
 -tar xf ~/Downloads/ros2-foxy-20201211-linux-focal-arm64.tar.bz2 
->if it's in your ros2_foxy folder, run this:
-	- tar xf ros2-foxy-20201211-linux-focal-arm64.tar.bz2
+>if it's in your ros2_foxy folder, run this: tar xf ros2-foxy-20201211-linux-focal-arm64.tar.bz2
 
 5. Once it completed:
-- sudo apt update
-- sudo apt install -y python3-rosdep
-- sudo rosdep init
-- rosdep update
-- rosdep install --from-paths ~/ros2_foxy/ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys "console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connext_cpp rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers"
+	- sudo apt update
+	- sudo apt install -y python3-rosdep
+	- sudo rosdep init
+	- rosdep update
+	- rosdep install --from-paths ~/ros2_foxy/ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys "console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connext_cpp rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers"
 
 6. Add Python 3 libaries:
 -sudo apt install -y libpython3-dev python3-pip
