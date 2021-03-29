@@ -12,7 +12,7 @@
 
 4. Depends on where you put the package. Assume you still have it in Download directory:
 -tar xf ~/Downloads/ros2-foxy-20201211-linux-focal-arm64.tar.bz2 
->if it's in your ros2_foxy folder, run this:
+> >if it's in your ros2_foxy folder, run this:
 	-tar xf ros2-foxy-20201211-linux-focal-arm64.tar.bz2
 
 5. Once it completed:
