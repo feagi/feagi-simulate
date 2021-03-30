@@ -1,14 +1,14 @@
-#To download ROS2 on 20.04 LTS Focal Ubuntu arm64 in the Raspberry pi model b+:
+#To download ROS2 on 20.04 LTS Focal Ubuntu arm64 in the Raspberry pi 3 model b+:
 1. dpkg --print-architecture
 * Verify the match package from the [link](https://github.com/ros2/ros2/releases/tag/release-foxy-20201211)
 2. Select your right package for your computer. It will be in your download folder by default. 
 3. run it in your terminal following those list:
--sudo apt update 
--sudo apt install curl gnupg2 lsb-release
--curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
--sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
--mkdir -p ~/ros2_foxy
--cd ~/ros2_foxy
+- sudo apt update 
+- sudo apt install curl gnupg2 lsb-release
+- curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+- sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
+- mkdir -p ~/ros2_foxy
+- cd ~/ros2_foxy
 
 4.Depends on where you put the package. Assume you still have it in Download directory:
 -tar xf ~/Downloads/ros2-foxy-20201211-linux-focal-arm64.tar.bz2 
