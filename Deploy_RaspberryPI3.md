@@ -1,10 +1,12 @@
 # Requirement:
-1. Python 3 (Noetic or Foxy required) 
+1. Python 3 
 2. 32 GB SD
 3. Raspberry PI 3+ (Older may run but heavily lagged)
+4. Since Python 3 is required, Noetic (ROS1) or Foxy (ROS2 and preferably) 
+
 
 # Recommendation:
-1. make a room for 1 GB in disksize in Deploy.md instruction.
+1. Make a room for 1 GB in disksize in Deploy.md instruction.
 2. HIGHLY recommend to use Foxy since FEAGI relies on accurate data in real time heavily.
 3. HIGHLY recommend to use SSH.
 4. HIGHLY recommend to not use GUI since you just need data and codes. Using GUI will result the extra slowness and lags.
