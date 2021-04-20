@@ -1,0 +1,67 @@
+1) https://micro.ros.org/docs/tutorials/core/first_application_linux/
+2) https://micro.ros.org//docs/tutorials/core/first_application_rtos/zephyr/
+3) sudo apt-get install arduino-mk  #to upload using ardiuno complier, following from https://github.com/sudar/Arduino-Makefile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+License
+
+This repository is open-sourced under the Apache-2.0 license. See the LICENSE file for details.
+
+For a list of other open-source components included in this repository, see the file 3rd-party-licenses.txt.
+
+
+
+Problem #1:
+ nvidia-dkms-460
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+ERROR: the following rosdeps failed to install
+  apt: command [sudo -H apt-get install -y ninja-build] failed
+
+Solution: sudo apt-get install --reinstall linux-headers-$(uname -r)
+
+Problem #2: 
+WARNING: topic [/microROS/pong] does not appear to be published yet
+Could not determine the type for the passed topic
+
+Solution:

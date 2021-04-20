@@ -1,0 +1,100 @@
+Test FEAGI with Raspberry PI via ROS2 Foxy:
+
+1) Read and follow the instruction from README.md on this link: https://github.com/mlherd/ros2_pi_gpio (This was written by Melih Erdogan) 
+2) If you started this without download RPI GPIO python, you will recieve errors like this;
+3) Before you start with this, download this;
+sudo apt-get install python3-dev python3-rpi.gpio
+sudo apt install python3-gpiozero
+
+4) You need to add your user to the gpio group. My username on rpi is ubuntu so I run this command:
+sudo usermod -a -G gpio ubuntu
+
+5) source install/setup.bash inside the workspace.
+6) run this command;
+ros2 run pi_gpio pi_gpio_server
+
+7) Ensure that it's working properly. Once you verify it's working well.
+
+8) Add the sonar sensor to this via ros2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Troubleshoot section:
+
+Problem #1:
+
+ubuntu@ubuntu:~/rpi$ ros2 run pi_gpio pi_gpio_server
+Traceback (most recent call last):
+  File "/home/ubuntu/rpi/install/pi_gpio/lib/pi_gpio/pi_gpio_server", line 11, in <module>
+    load_entry_point('pi-gpio==0.8.2', 'console_scripts', 'pi_gpio_server')()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 490, in load_entry_point
+    return get_distribution(dist).load_entry_point(group, name)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2854, in load_entry_point
+    return ep.load()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2445, in load
+    return self.resolve()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2451, in resolve
+    module = __import__(self.module_name, fromlist=['__name__'], level=0)
+  File "/home/ubuntu/rpi/install/pi_gpio/lib/python3.8/site-packages/pi_gpio/pi_gpio_server.py", line 9, in <module>
+    import RPi.GPIO as GPIO
+ModuleNotFoundError: No module named 'RPi'
+
+Solution: sudo apt-get install python3-dev python3-rpi.gpio
+
+
+Problem #2: 
+
+usermod: group 'gpio' does not exist
+Solution: groupadd gpio (then relog) 
+
+Problem #3: 
+FileNotFoundError: [Errno 2] No such file or directory: 'src/pi_gpio/gpio_pins.txt'
+
+Solution: put everythihng from ros2_pi_gpio/ into src/
+
+Problem #4:
+RuntimeError: No access to /dev/mem.  Try running as root!
+
+Solution: sudo usermod -a -G gpio <username> then relog (sudo reboot if you use ssh/terminal only)
