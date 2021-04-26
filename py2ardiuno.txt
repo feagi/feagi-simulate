@@ -1,0 +1,63 @@
+Python to ardiuno/ros2
+
+More detail information: https://realpython.com/arduino-python/
+
+Steps being done:
+1) nano py2ardiuno.py
+Copy and paste this in the py2ardiuno.py
+#!/usr/bin/env python3
+"""
+ Blinks an LED on digital pin 13
+ in 1 second intervals
+"""
+
+from Arduino import Arduino
+import time
+
+board = Arduino("/dev/ttyACM0",baudrate=115200, timeout=3.0) # plugged in via USB, serial com at rate 115200
+board.pinMode(11, "OUTPUT")
+
+while True:
+    board.digitalWrite(11, "LOW")
+    time.sleep(1)
+    board.digitalWrite(11, "HIGH")
+    time.sleep(1)
+
+2) chmod +x py2ardiuno.py
+3) python3 py2ardiuno.py
+
+
+
+
+
+
+
+
+
+Problem section:
+Problem #1: 
+Traceback (most recent call last):
+  File "./py2ardiuno", line 3, in <module>
+    import pyfirmata
+ModuleNotFoundError: No module named 'pyfirmata'
+
+Solution: pip3 install pyfirmata
+
+Problem #2: No respond or stuck in Ardiuno() in Python3 code
+Solution: Use this line: board = Arduino("/dev/ttyACM0",baudrate=115200, timeout=3.0)
+
+Problem #3:
+Traceback (most recent call last):
+  File "./py2ardiuno.py", line 12, in <module>
+    board.pinMode(11, "OUTPUT")
+AttributeError: 'Arduino' object has no attribute 'pinMode'
+
+Solution #3: 
+
+Problem #4:
+Traceback (most recent call last):
+  File "py2ardiuno", line 11, in <module>
+    board = Arduino("/dev/ttyACM0", baudrate = 115200, timeout=2) # plugged in via USB, serial com at rate 115200
+TypeError: __init__() got an unexpected keyword argument 'baudrate'
+
+
